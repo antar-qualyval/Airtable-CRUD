@@ -31,7 +31,7 @@ function App() {
     })
     e.preventDefault();
   }
-const SERVER_URL = 'https://airtable-crud.netlify.app/'
+const SERVER_URL = 'https://airtable-crud.netlify.app'
   useEffect(() => {
     fetch(`${SERVER_URL}/api/loadUser`).then((res) => res.json()).then((data) => {
       setUsers(data.users)
