@@ -35,7 +35,6 @@ function App() {
   useEffect(() => {
     fetch('http://localhost:8888/api/loadUser').then((res) => res.json()).then((data) => {
       setUsers(data.users)
-      console.log(users);
     });
   }, [load])
 
