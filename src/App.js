@@ -31,15 +31,15 @@ function App() {
     })
     e.preventDefault();
   }
-
+const SERVER_URL = 'https://airtable-crud.netlify.app/'
   useEffect(() => {
-    fetch('http://localhost:8888/api/loadUser').then((res) => res.json()).then((data) => {
+    fetch(`${SERVER_URL}/api/loadUser`).then((res) => res.json()).then((data) => {
       setUsers(data.users)
     });
   }, [load])
 
   const deleteUser = (id) => {
-    fetch(`http://localhost:8888/api/deleteUser?id=${id}`, {
+    fetch(`${SERVER_URL}/api/deleteUser?id=${id}`, {
       method: 'PUT',
       headers: {
         "Content-Type": "application/json"
